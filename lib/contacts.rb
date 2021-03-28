@@ -15,5 +15,11 @@ require 'pry'
   # }
   
 def remove_strawberry(contacts)
+  contacts.each do |person, attributes|
 
+    attributes.each do |k, v|
+      v.delete("strawberry") if v.include?("strawberry")
+    end
+
+  end
 end
